@@ -4,122 +4,130 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
-const api = require('./utils/api.js');
+// const util = require('util');
+// const api = require('./utils/api.js');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = [
+inquirer.prompt([
     {
-    type: 'input',
-    message: "What is your GitHub username?",
-    name: 'username',
-    default: 'potential-enigma',
-    validate:
-    (answerVal) => {
+        type: 'input',
+        message: "What is your GitHub username?",
+        name: 'username',
+        default: 'potential-enigma',
+        validate: (answerVal) => {
             if (answerVal.length < 1) {
                 return console.log("Please enter your a valid Github username.");
             }
             return true;
+        }
+    },
+
+    {
+        type: 'input',
+        message: "What is the name of your GitHub repo?",
+        name: 'repo',
+        default: 'repo-github-name',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Please enter your a valid Github title for your repe.");
+            }
+            return true;
+        }
+    },
+
+    {
+        type: 'input',
+        message: "Please enter a description, describing your project",
+        name: 'description here',
+
+        default: 'Here is what my github project is and how it works',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Please enter your a valid Github description for your repe.");
+            }
+            return true
         },
-}
-    {
-    type: 'input',
-    message: "What is the name of your GitHub repo?",
-    name: 'repo',
-    default: 'this-is-my-GH-repo',
-    validate: 
+    },
 
-    }
-    {
-    type: 'input',
-    message: "What is the title of your project",
-    name: 'title',
-    default: 'Project Title',
-    validate: 
-    }
-
-    {
-    type: 'input',
-    message: "",
-    name: 'description',
-    default: '',
-    validate: 
-    }
-//WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-//THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+    //WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
     {
         type: 'input',
-        message: "",
-        name: 'installation instructions',
-        default: '',
-        validate: 
-    }
-
+        message: "Describe the steps required to install your project for the Installation section.",
+        name: 'installation steps'
+    },
     {
         type: 'input',
-        message: "",
-        name: 'usage info',
-        default: '',
-        validate: 
-    }
-
+        message: "Describe the usage of your Github project.",
+        name: 'usage desriptor'
+    },
     {
         type: 'input',
-        message: "",
-        name: '',
-        default: '',
-        validate: 
-    }
+        message: "How can others contribute to your project? Please detail.",
+        name: 'contributor help'
+    },
     {
         type: 'input',
-        message: "",
-        name: 'contribution guidelines',
-        default: '',
-        validate: 
-    }
-    {
-        type: 'input',
-        message: "",
-        name: '',
-        default: 'test instructions',
-        validate: 
-    }
+        message: "Provide any tests for your application as well as any examples on how to run them.",
+        name: 'tests'
+    },
 
-
-    // WHEN I choose a license for my application from a list of options
-    // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
     {
         type: 'list',
-        message: "",
+        message: "Please choose a license",
         name: 'license',
-        choices: ['Apache 2.0', 'Boost', 'BSD 2-Clause', 'BSD 3-Clause', 'Creative Commons', 'Eclipse', 'GNU GPL v3', 'Hippocratic', 'IBM IPL', 'ISC', 'MIT', 'Mozilla MPL', 'Open Data Commons (BY)', 'Open Database License (ODbL)', 'Perl', 'SIL Open Font', 'Unlicense', 'WTFPL', 'Zlib', '', '', '', '', ''],
+        choices: ['Apache 2.0', 'Boost', 'BSD 2-Clause', 'BSD 3-Clause', 'Creative Commons', 'Eclipse', 'GNU GPL v3', 'Hippocratic', 'IBM IPL', 'ISC', 'MIT', 'Mozilla MPL', 'Open Data Commons (BY)', 'Open Database License (ODbL)', 'Perl', 'SIL Open Font', 'Unlicense', 'WTFPL', 'Zlib', 'None'],
     }
-    {
-        type: 'input',
-        message: "",
-        name: '',
-        default: '',
-        validate: 
-    }
-]
 
-
-
-
-
-;
+]).then(answers => {
+    fs.writeFile("README.md", generateMarkdown(answers), (err) => {
+        if(err) throw err;
+        console.log("README created!")
+    })
+})
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) { }
 
-// TODO: Create a function to initialize app
-async function init() {
-    try {
 
-    }
-}
+// // TODO: Create a function to initialize app
+// async function init() {
+//     fs.writeFile((fileName, data, err) => {
+//         if (err) {
+//             return console.log(err);
+//         }
+//     })
+// }
 
-// Function call to initialize app
-init();
+// const writeFileAsync = util.promisify(writeToFile);
+
+// async function init() {
+//     try {
+
+//         // Prompt Inquirer questions
+//         const userResponses = await inquirer.prompt(questions);
+//         console.log("Your responses: ", userResponses);
+//         console.log("Thank you for your responses! Fetching your GitHub data next...");
+
+//         // Call GitHub api for user info
+//         const userInfo = await api.getUser(userResponses);
+//         console.log("Your GitHub user info: ", userInfo);
+
+//         // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
+//         console.log("Generating your README next...")
+//         const markdown = generateMarkdown(userResponses, userInfo);
+//         console.log(markdown);
+
+//         // Write markdown to file
+//         await writeFileAsync('ExampleREADME.md', markdown);
+
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
+
+// init();
+
+// // Function call to initialize app
+// init();
 
