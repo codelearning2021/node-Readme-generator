@@ -1,10 +1,31 @@
-# undefined
-# Table of Contents
-----------------------
-* 
+# Node server ReadMe Generator
 
-# License
-![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)(https://opensource.org/licenses/Apache-2.0)
+This backend Node.js application will automatically create a readme file based on the inputs the user creates
 
-
+  ## Table of Contents
+  * [Instructions](#instructions)
+  * [Links](#links)
+  * [License](#license)
+  * [Questions](#questions)
   
+----------------------
+
+## Instructions
+This app can easily create a complete ReadMe file for any Github repo. Start by:
+- Cloning Git repository
+- Run npm install to install necessary package.json
+- node index.js in the command line for the repo
+- Follow directions to generate your personalized Readme
+- You'll have a readme file generated for your Repo!
+
+## Links
+Repo: https://github.com/codelearning2021/node-Readme-generator
+Gif of execution:
+
+
+## License 
+  This project is licensed under MIT
+  ![Github license](http://img.shields.io/badge/license-MIT-blu
+
+## Questions
+  Contact me via my github: https://github.com/codelearning2021
