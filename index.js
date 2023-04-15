@@ -37,7 +37,7 @@ inquirer.prompt([
     {
         type: 'input',
         message: "Please enter a description, describing your project",
-        name: 'description here',
+        name: 'description',
 
         default: 'Here is what my github project is and how it works',
         validate: function (answer) {
@@ -52,17 +52,17 @@ inquirer.prompt([
     {
         type: 'input',
         message: "Describe the steps required to install your project for the Installation section.",
-        name: 'installation steps'
+        name: 'installation_steps'
     },
     {
         type: 'input',
         message: "Describe the usage of your Github project.",
-        name: 'usage desriptor'
+        name: 'usage_desriptor'
     },
     {
         type: 'input',
         message: "How can others contribute to your project? Please detail.",
-        name: 'contributor help'
+        name: 'contributor_help'
     },
     {
         type: 'input',
