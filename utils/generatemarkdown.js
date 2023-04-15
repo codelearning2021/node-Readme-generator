@@ -62,7 +62,18 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.repo}
+  return `
+
+  ## Repo Username
+  ${data.username}
+
+  ## Description 
+  
+  *The what, why, and how:* 
+  
+  ${userResponses.description}
+  
+  # ${data.repo}
   
 ## Instructions
 ${data.instructions}
@@ -81,11 +92,22 @@ ${renderLicenseSection(data.license)}
 
 module.exports = generateMarkdown;
 
-// title, anything in acceptance criteria
 
-// Optional Usage section
-// if (userResponses.usage !== '') {
-
-//   draftMarkdown +=
-
-//     `
+// type: 'input',
+//         message: "Describe the steps required to install your project for the Installation section.",
+//         name: 'installation_steps'
+//     },
+//     {
+//         type: 'input',
+//         message: "Describe the usage of your Github project.",
+//         name: 'usage_desriptor'
+//     },
+//     {
+//         type: 'input',
+//         message: "How can others contribute to your project? Please detail.",
+//         name: 'contributor_help'
+//     },
+//     {
+//         type: 'input',
+//         message: "Provide any tests for your application as well as any examples on how to run them.",
+//         name: 'tests'
