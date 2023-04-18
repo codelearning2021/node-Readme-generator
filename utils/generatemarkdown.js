@@ -86,8 +86,6 @@ function generateMarkdown(data) {
         ${ data.description }
   
   ## Repo Name: ${ data.repo }
-
-
   
   ## Instructions
   * Steps required to install project and how to get the development environment running:
