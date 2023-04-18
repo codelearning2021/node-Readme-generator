@@ -66,9 +66,6 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
-
-      * Steps required to install project and how to get the development environment running:
-
 # Table of Contents
     ----------------------
 * [Repo User](#repo - username)
@@ -88,11 +85,13 @@ function generateMarkdown(data) {
 
         ${ data.description }
   
-  # ${ data.repo }
+  ## Repo Name: ${ data.repo }
 
 
   
   ## Instructions
+  * Steps required to install project and how to get the development environment running:
+
   ${ data.instructions }
 
   ## Usage

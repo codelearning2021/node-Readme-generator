@@ -1,5 +1,5 @@
 
-# title
+# Readme Generator
 
 
       * Steps required to install project and how to get the development environment running:
@@ -15,15 +15,15 @@
 
 
 ## Repo Username
-  user
+  codelearning2021
 
   ## Description
 
       * The what, why, and how:*
 
-        it makes a readme
+        This node application creates readmes for github repos
   
-  # repo title
+  # readme-gen
 
 
   
@@ -31,10 +31,10 @@
   undefined
 
   ## Usage
-  follow the video
+  clone repo, open 'node index.js' in the command line in the repo and follow prompts
 
   ## Contributors
-  none
+  Please contact me via github user details
 
   ## Tests
   none
