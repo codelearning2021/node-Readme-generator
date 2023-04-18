@@ -64,7 +64,7 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-
+# ${data.title}
 
 
       * Steps required to install project and how to get the development environment running:
@@ -86,7 +86,7 @@ function generateMarkdown(data) {
 
       * The what, why, and how:*
 
-        ${ userResponses.description }
+        ${ data.description }
   
   # ${ data.repo }
 

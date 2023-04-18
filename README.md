@@ -16,7 +16,7 @@ This app can easily create a complete ReadMe file for any Github repo. Start by:
 - Run npm install to install necessary package.json
 - node index.js in the command line for the repo
 - Follow directions to generate your personalized Readme
-- You'll have a readme file generated for your Repo!
+- You'll have a readme file generated for your Repo! You can find it in the folder of your repo
 
 ## Links
 Repo: https://github.com/codelearning2021/node-Readme-generator

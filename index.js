@@ -10,6 +10,18 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 inquirer.prompt([
     {
         type: 'input',
+        message: "What is your Project's title?",
+        name: 'title',
+        default: 'Readme Generator',
+        validate: (answerVal) => {
+            if (answerVal.length < 1) {
+                return console.log("Please enter a title.");
+            }
+            return true;
+        }
+    },
+    {
+        type: 'input',
         message: "What is your GitHub username?",
         name: 'username',
         default: 'potential-enigma',
