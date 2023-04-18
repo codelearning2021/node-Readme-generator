@@ -2,13 +2,12 @@
 # Readme Generator
 
 
-      * Steps required to install project and how to get the development environment running:
-
 # Table of Contents
     ----------------------
 * [Repo User](#repo - username)
       * [Description](#description)
       * [Usage](#usage)
+      * 
       * [Contributors](#contributors)
       * [Tests](#tests)
       * [License](#license)
@@ -28,10 +27,10 @@
 
   
   ## Instructions
-  undefined
+        * Steps required to install project and how to get the development environment running:
+  clone repo, open 'node index.js' in the command line in the repo and follow prompts
 
   ## Usage
-  clone repo, open 'node index.js' in the command line in the repo and follow prompts
 
   ## Contributors
   Please contact me via github user details

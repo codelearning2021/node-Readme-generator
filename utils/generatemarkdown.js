@@ -68,8 +68,10 @@ function generateMarkdown(data) {
 
 # Table of Contents
     ----------------------
-* [Repo User](#repo - username)
+      * [Repo User](#repo - username)
       * [Description](#description)
+      * [Repo Name](#repo-name)
+      * [Instructions](#instructions)
       * [Usage](#usage)
       * [Contributors](#contributors)
       * [Tests](#tests)
@@ -89,11 +91,10 @@ function generateMarkdown(data) {
   
   ## Instructions
   * Steps required to install project and how to get the development environment running:
-
-  ${ data.instructions }
+  ${ data.installation_steps }
 
   ## Usage
-  ${ data.installation_steps }
+  ${ data.usage }
 
   ## Contributors
   ${data.contributor_help}
