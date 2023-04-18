@@ -69,7 +69,7 @@ inquirer.prompt([
     {
         type: 'input',
         message: "Describe the usage of your Github project.",
-        name: 'usage_desriptor'
+        name: 'usage'
     },
     {
         type: 'input',
