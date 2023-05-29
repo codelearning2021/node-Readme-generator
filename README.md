@@ -5,6 +5,7 @@ This backend Node.js application will automatically create a readme file based o
   ## Table of Contents
   * [Instructions](#instructions)
   * [Links](#links)
+  * [Walkthrough](#walkthrough)
   * [License](#license)
   * [Questions](#questions)
   
@@ -20,8 +21,9 @@ This app can easily create a complete ReadMe file for any Github repo. Start by:
 
 ## Links
 Repo: https://github.com/codelearning2021/node-Readme-generator
-Gif of execution:
 
+## Walkthrough
+https://github.com/codelearning2021/node-Readme-generator/raw/main/walkthrough%20readme%20generator.mp4
 
 ## License 
   This project is licensed under MIT
